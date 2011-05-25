@@ -33,23 +33,23 @@ public:
 protected:
 	void changeEvent (QEvent *e);
 	void timerEvent (QTimerEvent *);
-	
+
 private Q_SLOTS:
 	void read ();
-	void openUrl (QTableWidgetItem* item);
+	void openUrl (QTableWidgetItem *item);
 	void ignoreThread ();
 	void ignoreCurrentThread ();
 	void closeTab (int index);
 	void trayClicked (QSystemTrayIcon::ActivationReason reason);
 	void messageClicked ();
-	
+
 private:
-	MainWindow (const MainWindow&);
-	MainWindow& operator= (const MainWindow&);
+	MainWindow (const MainWindow &);
+	MainWindow &operator= (const MainWindow &);
 
 	void loadSettings ();
 	void saveSettings ();
-	void openUrl (const QUrl& url);
+	void openUrl (const QUrl &url);
 	void showAndActivate ();
 	void showHide ();
 
@@ -58,7 +58,7 @@ private:
 
 	QNetworkAccessManager *manager_;
 	QSystemTrayIcon *tray_;
-	
+
 	QString topThread_;
 	QUrl topLink_;
 	QStringList ignoredThreads_;
