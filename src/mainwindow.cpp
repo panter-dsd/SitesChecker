@@ -12,6 +12,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+const qint64 updateInterval = 1000 * 10; //10 seconds
+
 namespace Gui
 {
 
@@ -22,7 +24,7 @@ MainWindow::MainWindow (QWidget *parent)
 {
 	ui_->setupUi (this);
 
-	startTimer (1000 * 10);
+	startTimer (updateInterval);
 
 	QMenu *menu = new QMenu (this);
 	menu->addAction (ui_->actionIgnoreCurrentThread);
