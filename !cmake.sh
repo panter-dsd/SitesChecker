@@ -11,6 +11,6 @@ cd ..
 
 mkdir build_unix_debug
 cd build_unix_debug
-cmake -D CMAKE_BUILD_TYPE=Debug /mnt/work/program/SitesChecker
+cmake -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -D CMAKE_BUILD_TYPE=Debug /mnt/work/program/SitesChecker
 cd ..
 
