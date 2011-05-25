@@ -93,6 +93,8 @@ void MainWindow::loadSettings ()
 	if (isMaximized) {
 		setWindowState (Qt::WindowMaximized);
 	}
+	
+	ui_->splitter->restoreState (settings.value ("SplitterState").toByteArray ());
 
 	settings.endGroup();
 
@@ -114,6 +116,8 @@ void MainWindow::saveSettings ()
 	} else {
 		settings.setValue ("IsMaximized", true);
 	}
+	
+	settings.setValue ("SplitterState", ui_->splitter->saveState ());
 
 	settings.endGroup();
 
