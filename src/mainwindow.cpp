@@ -1,7 +1,5 @@
 #include <QtCore/QDebug>
 #include <QtCore/QSettings>
-#include <QtCore/QDateTime>
-#include <QtCore/QFile>
 
 #include <QtGui/QMessageBox>
 
